@@ -80,6 +80,8 @@ class Api:
             model = item_data.get('model')
             stream = True if item_data.get("stream") == "True" else False
             messages = item_data.get('messages')
+            print('---sending:' + messages)
+            logging.debug(messages)
 
             try:
                 response = g4f.ChatCompletion.create(
@@ -97,7 +99,7 @@ class Api:
             if not stream:
                 #prompt_tokens, _ = tokenize(''.join([message['content'] for message in messages]))
                 #completion_tokens, _ = tokenize(response)
-
+                print('---receiving:' + response)
                 json_data = {
                     'id': f'chatcmpl-{completion_id}',
                     'object': 'chat.completion',

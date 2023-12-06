@@ -83,7 +83,9 @@ gpt_4 = Model(
     name          = 'gpt-4',
     base_provider = 'openai',
     best_provider = RetryProvider([
-        Bing, Phind, Liaobots
+        Bing
+        #以下两个有点问题
+        #, Phind, Liaobots
     ])
 )
 

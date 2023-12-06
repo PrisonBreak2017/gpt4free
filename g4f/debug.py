@@ -1,1 +1,1 @@
-logging = False
+logging = True
