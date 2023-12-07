@@ -56,8 +56,10 @@ gpt_35_long = Model(
     name          = 'gpt-3.5-turbo',
     base_provider = 'openai',
     best_provider = RetryProvider([
-        FreeGpt, You,
-        GeekGpt, FakeGpt,
+        FreeGpt, 
+        You,
+        GeekGpt, 
+        FakeGpt,
         Berlin, Koala,
         Chatgpt4Online,
         ChatAnywhere,
@@ -72,8 +74,11 @@ gpt_35_turbo = Model(
     name          = 'gpt-3.5-turbo',
     base_provider = 'openai',
     best_provider=RetryProvider([
-        ChatgptX, GptGo, You, 
-        GptForLove, ChatBase,
+        #ChatgptX, 
+        # GptGo, 
+        You, 
+        # GptForLove, 
+        ChatBase,
         Chatgpt4Online,
         ChatAnywhere,
     ])
